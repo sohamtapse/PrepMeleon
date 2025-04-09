@@ -28,7 +28,7 @@ const page = () => {
       <section className="flex flex-col gap-6 mt-10">
         <h2>Your Pathetic Iterviews</h2>
         <div className="interveiws-section">
-          <p>You haven't taken any interveiws yet.</p>
+          <p>You haven&apos;t taken any interveiws yet.</p>
         </div>
       </section>
       <section className="flex flex-col gap-6 mt-8">
