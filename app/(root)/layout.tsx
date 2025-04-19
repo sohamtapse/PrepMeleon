@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
+import { redirect } from "next/navigation";
+import { isAuthenticated } from "@/lib/actions/auth.action";
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
+const RootLayout = async ({ children }: { children: ReactNode }) => {
+  const isUserAuthenticated = await isAuthenticated();
+  if (!isUserAuthenticated) redirect("/sign-in");
   return (
     <div className="flex mx-auto max-w-7xl flex-col gap-12 my-10 px-16 max-sm:px-4 max-sm:my-8">
       <nav>
